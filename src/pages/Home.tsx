@@ -10,7 +10,7 @@ import ClassesSection from '../components/home/ClassesSection';
 
 export default function Home() {
   return (
-    <>
+    <section className='bg-[#010101]'>
       <Navbar />
       <HomeHeader />
       <StatsSection />
@@ -20,6 +20,6 @@ export default function Home() {
       <PricingSection />
       <ReviewsSection />
       <Footer />
-    </>
+    </section>
   );
 }

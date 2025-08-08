@@ -1,16 +1,16 @@
-import { useEffect, useState, useCallback } from "react";
-import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
-import NavLinks from "./NavLinks";
-import { Button } from "../ui/Button";
-import MenuIcon from "../icon/sidebar/MenuIcon";
+import { useEffect, useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
+import NavLinks from './NavLinks';
+import { Button } from '../ui/Button';
+import MenuIcon from '../icon/sidebar/MenuIcon';
 import {
   containerVariant,
   menuItemVariants,
   overlayVariants,
   sidebarVariants,
-} from "../../utils/animation";
-import CloseCircleIcon from "../icon/sidebar/CloseCircleIcon";
+} from '../../utils/animation';
+import CloseCircleIcon from '../icon/sidebar/CloseCircleIcon';
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -18,22 +18,22 @@ export default function Navbar() {
 
   // Body overflow management
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = 'auto';
     };
   }, [isOpen]);
 
   return (
     <>
-      <nav className="py-3 px-[60px]   sticky top-0  sm:block z-50 bg-black lg:border-none border-b-[0.5px] ">
+      <nav className="mx-10 rounded-xl  px-[60px]   sticky top-2  sm:block z-50 bg-[#010101] lg:border-none border-b-[0.5px] ">
         <motion.div
           className="flex justify-between items-center"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <Link to={""}>
+          <Link to={''}>
             <img
               src="/assets/logo.png"
               loading="eager"
@@ -45,10 +45,7 @@ export default function Navbar() {
             <NavLinks isMobile={false} />
           </div>
           <div className="flex items-center gap-2 w-full lg:w-fit justify-between ">
-            <Button
-              variant="default"
-              className="order-1 sm:order-none group  relative"
-            >
+            <Button variant="default" className="order-1 sm:order-none group  relative">
               <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
                 <svg
                   className="w-5 h-5 text-[#11111]"
@@ -80,7 +77,7 @@ export default function Navbar() {
                 <MenuIcon className="text-white size-10" />
               </motion.button>
             </div>
-            <Link to={"/"} className="order-1 ">
+            <Link to={'/'} className="order-1 ">
               <motion.img
                 src="/assets/logo.png"
                 alt="logo of page"
@@ -128,10 +125,7 @@ export default function Navbar() {
               </motion.div>
 
               <motion.div className="w-full" variants={menuItemVariants}>
-                <Button
-                  variant="default"
-                  className="order-1 mt-10 sm:order-none group  relative"
-                >
+                <Button variant="default" className="order-1 mt-10 sm:order-none group  relative">
                   <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
                     <svg
                       className="w-5 h-5 text-[#11111]"

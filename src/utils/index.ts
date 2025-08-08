@@ -1,4 +1,4 @@
-import type { Plan } from './interface';
+import type { FormFieldConfig, Plan } from './interface';
 
 // inks for navbar
 export const links = [
@@ -101,5 +101,61 @@ export const plans: Plan[] = [
       '24/7 VIP support',
     ],
     isPopular: false,
+  },
+];
+
+//for login
+
+export const loginFormData: FormFieldConfig[] = [
+  {
+    name: 'email',
+    type: 'email',
+    placeholder: 'Enter your email',
+    label: 'Email Address',
+  },
+  {
+    name: 'password',
+    type: 'password',
+    placeholder: 'Enter your password',
+    label: 'Password',
+  },
+];
+
+export const signupFormData: FormFieldConfig[] = [
+  {
+    name: 'firstName',
+    type: 'text',
+    placeholder: 'Enter your first name',
+    label: 'First Name',
+  },
+  {
+    name: 'lastName',
+    type: 'text',
+    placeholder: 'Enter your last name',
+    label: 'Last Name',
+  },
+  {
+    name: 'email',
+    type: 'email',
+    placeholder: 'Enter your email',
+    label: 'Email Address',
+  },
+  {
+    name: 'phone',
+    type: 'tel',
+    placeholder: 'Enter your phone number',
+    label: 'Phone Number',
+  },
+  {
+    name: 'password',
+    type: 'password',
+    placeholder: 'Create a password',
+    label: 'Password',
+  },
+  {
+    name: 'confirmPassword',
+    type: 'password',
+    placeholder: 'Confirm your password',
+    label: 'Confirm Password',
   },
 ];
