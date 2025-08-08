@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
-import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import type { ReactNode } from 'react';
+import { FaFacebookF, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 
 interface SocialLink {
   id: number;
@@ -11,21 +11,21 @@ interface SocialLink {
 const socialLinks: SocialLink[] = [
   {
     id: 1,
-    href: "https://facebook.com",
+    href: 'https://facebook.com',
     icon: <FaFacebookF className="w-5 h-5" />,
-    hoverColor: "hover:bg-black-text",
+    hoverColor: 'hover:-bg-black-text',
   },
   {
     id: 2,
-    href: "https://twitter.com",
+    href: 'https://twitter.com',
     icon: <FaInstagram className="w-5 h-5" />,
-    hoverColor: "hover:bg-black-text",
+    hoverColor: 'hover:bg-bg-black-text',
   },
   {
     id: 3,
-    href: "https://x.com",
+    href: 'https://x.com',
     icon: <FaXTwitter className="w-5 h-5" />,
-    hoverColor: "hover:bg-black-text",
+    hoverColor: 'hover:bg-black-text',
   },
 ];
 

@@ -1,63 +1,82 @@
-import React from 'react';
+import { SocialLinks } from './SocialIcon';
+const links = [
+  { id: 1, name: 'Home', url: '#Home' },
+  { id: 2, name: 'About', url: '#About' },
+  { id: 3, name: 'Service', url: '#Service' },
+  { id: 4, name: 'Contact', url: '#Contact' },
+];
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <div className="bg-gray-100 py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Logo & Description */}
-          <div>
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-black rounded mr-2"></div>
-              <span className="font-bold text-xl">FITGURU</span>
-            </div>
-            <p className="text-gray-600 text-sm mb-4">
-              Accusamus quos nesciunt veniam nam quis
+    <footer
+      className="pt-[60px] pb-[40px]  text-center sm:text-start bg-cover bg-no-repeat overflow-hidden text-[#9E9E9E] text-base lg:text-[20px] "
+      style={{
+        backgroundImage: 'url("/assets/Footer.webp")',
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-4 lg:px-[40px] ">
+        {/* صفوف جنب بعض */}
+        <div className="flex flex-col lg:flex-row gap-10 justify-center lg:gap-[80px]">
+          {/* الصف الأول: صورة + وصف + سوشيال ميديا */}
+          <div className="flex flex-col lg:w-[300px] justify-center  w-full gap-4">
+            <img
+              src="assets/logo.png"
+              loading="lazy"
+              alt="footer logo"
+              className="w-[120px]  h-[36px] lg:w-[200px] lg:h-[65px] rounded-md"
+            />
+            <p className=" mt-4">A short description about the gym goes here.</p>
+            <SocialLinks />
+          </div>
+
+          {/* الصف الثاني: روابط الموقع */}
+          <div className="flex flex-col lg:w-[300px] w-full items-center space-y-[11px]">
+            <p className="text-h5 lg:text-[24px] font-extrabold cursor-pointer text-white mb-4">
+              Site Links
             </p>
-            <p className="text-gray-600 text-sm mb-4">shahshaan254@gmail.com</p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-600 hover:text-black">📘</a>
-              <a href="#" className="text-gray-600 hover:text-black">🐦</a>
-              <a href="#" className="text-gray-600 hover:text-black">📷</a>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Home</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">About Us</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Services</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Contact</a></li>
+            <ul className="flex flex-col gap-2  ">
+              {links.map((link) => (
+                <li key={link.id}>
+                  <a
+                    href={link.url}
+                    className="relative inline-block  px-1 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 hover:after:w-full"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Lorem Ipsum */}
-          <div>
-            <h3 className="font-semibold mb-4">Lorem Ipsum</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Lorem</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Lorem</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Lorem</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Lorem</a></li>
-            </ul>
-          </div>
-
-          {/* Lorem Ipsum 2 */}
-          <div>
-            <h3 className="font-semibold mb-4">Lorem Ipsum</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Lorem</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Lorem</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Lorem</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-black text-sm">Lorem</a></li>
-            </ul>
+          <div className="flex flex-col lg:w-[300px] w-full items-center space-y-[11px]">
+            <p className="text-h5 lg:text-[24px] font-extrabold cursor-pointer  text-white mb-4">
+              Contact Us
+            </p>
+            <p>
+              Email:{' '}
+              <a
+                href="mailto:info@yourgym.com"
+                className="relative inline-block  px-1 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                info@yourgym.com
+              </a>
+            </p>
+            <p>
+              Phone:{' '}
+              <a
+                href="tel:+201234567890"
+                className="relative inline-block  px-1 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-black-text after:w-0 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                +20 123 456 7890
+              </a>
+            </p>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default Footer;
+        <div className="border-t border-white mt-10 pt-6 text-center">
+          <p className="max-w-[606px] mx-auto">جميع الحقوق محفوظة © 2025</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
