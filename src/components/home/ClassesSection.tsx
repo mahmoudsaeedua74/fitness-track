@@ -1,19 +1,19 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Heading } from "../ui/Heading";
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Heading } from '../ui/Heading';
 import {
   classCardVariants,
   classContainerVariants,
   tabItemVariants,
   tabsContainerVariants,
-} from "../../utils/animation";
-import { categories, classesData } from "../../utils";
+} from '../../utils/animation';
+import { categories, classesData } from '../../utils';
 
 export default function ClassesSection() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState('All');
 
   const filteredClasses =
-    activeCategory === "All"
+    activeCategory === 'All'
       ? classesData
       : classesData.filter((item) => item.category === activeCategory);
 
@@ -43,18 +43,11 @@ export default function ClassesSection() {
               className={`relative px-5 py-1 font-medium rounded-full border transition-all duration-300
         ${
           activeCategory === category
-            ? "bg-black-text text-white border-black-text shadow-lg scale-105"
-            : "bg-white text-black-text border-gray-300 hover:bg-gray-100"
+            ? 'bg-black-text text-white border-black-text shadow-lg scale-105'
+            : 'bg-white text-black-text border-gray-300 hover:bg-gray-100'
         }`}
             >
               {category}
-              {activeCategory === category && (
-                <motion.div
-                  layoutId="activeTabUnderline"
-                  className="absolute -bottom-1 left-0 right-0 h-[2px] bg-white rounded-full"
-                  transition={{ duration: 0.3 }}
-                />
-              )}
             </motion.button>
           ))}
         </motion.div>
@@ -84,12 +77,8 @@ export default function ClassesSection() {
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-center p-4">
-                  <h3 className="text-white text-xl font-semibold">
-                    {item.title}
-                  </h3>
-                  <p className="text-white/80 text-sm mt-2">
-                    {item.description}
-                  </p>
+                  <h3 className="text-white text-xl font-semibold">{item.title}</h3>
+                  <p className="text-white/80 text-sm mt-2">{item.description}</p>
                 </div>
               </motion.div>
             ))}

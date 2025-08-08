@@ -24,7 +24,7 @@ export function TrainerCard({
         <div className="absolute inset-0 bg-black/40" />
       </div>
       {/* Layer عند الـ Hover */}
-      <div className="absolute inset-0 bg-white/50 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out flex flex-col justify-center items-center p-4 text-center">
+      <div className="absolute inset-0 bg-white/50 translate-x-[-130%] group-hover:translate-x-0 transition-transform duration-500 ease-out flex flex-col justify-center items-center p-4 text-center">
         <h3 className="text-lg font-semibold text-black-text">
           {trainer.name}
         </h3>

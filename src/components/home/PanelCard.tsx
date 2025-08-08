@@ -7,17 +7,17 @@ interface PanelCardProps {
 const PanelCard: React.FC<PanelCardProps> = ({ data, isActive }) => {
   return (
     <div
-      className={`relative rounded-xl w-full max-w-sm mx-auto p-6 sm:p-8 flex flex-col transition-all duration-300 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]
+      className={`relative rounded-xl w-full max-w-sm mx-auto p-6 m-2 sm:p-8 flex flex-col transition-all duration-300 min-h-[400px] sm:min-h-[450px] lg:min-h-[500px]
         ${
           isActive
-            ? 'bg-black text-white shadow-2xl scale-105 transform'
-            : 'bg-white  border border-black text-black shadow-lg hover:shadow-xl hover:-translate-y-1'
+            ? 'bg-black text-white shadow-md scale-105 transform'
+            : 'bg-white  border border-black text-black shadow-lg hover:shadow-lg hover:-translate-y-1'
         }
       `}
     >
       {data.isPopular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+          <span className="bg-blue-500 text-white px-2 sm:px-4 py-1 rounded-full text-sm font-medium">
             Most Popular
           </span>
         </div>

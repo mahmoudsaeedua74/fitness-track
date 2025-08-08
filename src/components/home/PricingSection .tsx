@@ -64,7 +64,7 @@ const PricingSection = () => {
           {plans.map((panel, index) => (
             <SwiperSlide
               key={index}
-              className="flex justify-center h-auto py-8 sm:py-20 cursor-pointer"
+              className="flex justify-center p-8 sm:py-20 cursor-pointer"
             >
               <PanelCard data={panel} isActive={index === activeIndex} />
             </SwiperSlide>

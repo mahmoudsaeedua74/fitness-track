@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Button } from '../ui/Button';
 import { FaStar } from 'react-icons/fa6';
 
 const reviews = [
@@ -52,21 +51,15 @@ const renderStars = (rating: number) =>
   ));
 export default function ReviewsSection() {
   return (
-    <section className="bg-[#eeeeee] py-12 md:py-[98px] md:px-[60px]">
-      <div className="px-[60px]">
+    <section className="bg-[#eeeeee] py-12 md:py-[98px]  md:px-[60px]">
+      <div className="px-2 md:px-[60px]">
         {/* Header */}
-        <div className="flex justify-around items-center mb-[80px]">
-          <div>
-            <p className="text-gray-600 uppercase tracking-wide mb-2">Reviews</p>
-            <h2 className="text-4xl font-bold text-black-text">Your Review</h2>
-          </div>
-          <Button variant="opinion" size={'lg'}>
-            Your Opinion +
-          </Button>
+        <div className="text-center mb-[80px]">
+          <h2 className="text-4xl font-bold text-black-text">Our Reviews</h2>
         </div>
 
         {/* Main content flex container */}
-        <div className="flex gap-[116px] items-center mt-[80px] flex-col lg:flex-row">
+        <div className="flex gap-[116px] items-center mt-[80px] flex-col xl:flex-row">
           {/* Left side: Image */}
           <img
             src="/assets/group.png"

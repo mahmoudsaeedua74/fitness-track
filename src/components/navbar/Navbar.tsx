@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="mx-10 rounded-xl  px-[60px]   sticky top-2  sm:block z-50 bg-[#010101] lg:border-none border-b-[0.5px] ">
+      <nav className="mx-10 rounded-xl px-3 py-2 sm:py-1 sm:px-[60px]   sticky top-2  sm:block z-50 bg-[#010101] lg:border-none border-b-[0.5px] ">
         <motion.div
           className="flex justify-between items-center"
           initial={{ y: -50, opacity: 0 }}
@@ -45,7 +45,7 @@ export default function Navbar() {
             <NavLinks isMobile={false} />
           </div>
           <div className="flex items-center gap-2 w-full lg:w-fit justify-between ">
-            <Button variant="default" className="order-1 sm:order-none group  relative">
+            <Button variant="default" className="order-1 sm:order-none group  relative ">
               <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
                 <svg
                   className="w-5 h-5 text-[#11111]"
