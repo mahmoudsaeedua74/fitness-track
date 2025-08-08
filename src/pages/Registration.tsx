@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import type { LoginFormData, SignupFormData } from '../../utils/interface';
-import { loginSchema, signupSchema } from '../../validation';
-import LoginForm from './Login';
-import SignupForm from './SingIn';
+import type { LoginFormData, SignupFormData } from '../utils/interface';
+import { loginSchema, signupSchema } from '../validation';
+import LoginForm from '../components/auth/Login';
+import SignupForm from '../components/auth/SingIn';
 
-const AuthSystem: React.FC = () => {
+
+const Registration: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<0 | 1>(0);
 
   // Login Form Hook
@@ -122,4 +123,4 @@ const AuthSystem: React.FC = () => {
   );
 };
 
-export default AuthSystem;
+export default Registration;

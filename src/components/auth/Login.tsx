@@ -1,7 +1,7 @@
 import { Button } from '../../components/ui/Button';
-import Input from '../../components/ui/Input';
 import { loginFormData } from '../../utils';
 import type { LoginFormData, LoginFormProps } from '../../utils/interface';
+import Input from '../ui/Input';
 
 const LoginForm: React.FC<LoginFormProps> = ({ register, handleSubmit, errors, onSubmit }) => {
   return (

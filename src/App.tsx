@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
-import AuthSystem from './pages/auth/Aut';
+import Registration from './pages/Registration';
 export default function App() {
   const route = createBrowserRouter([
     {
@@ -10,7 +10,7 @@ export default function App() {
     },
     {
       path: '/register',
-      element: <AuthSystem />,
+      element: <Registration />,
     },
   ]);
   return (
