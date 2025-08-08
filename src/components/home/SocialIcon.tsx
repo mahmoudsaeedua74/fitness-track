@@ -13,13 +13,13 @@ const socialLinks: SocialLink[] = [
     id: 1,
     href: 'https://facebook.com',
     icon: <FaFacebookF className="w-5 h-5" />,
-    hoverColor: 'hover:-bg-black-text',
+    hoverColor: 'hover:bg-black-text',
   },
   {
     id: 2,
     href: 'https://twitter.com',
     icon: <FaInstagram className="w-5 h-5" />,
-    hoverColor: 'hover:bg-bg-black-text',
+    hoverColor: 'hover:bg-black-text',
   },
   {
     id: 3,
