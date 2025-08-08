@@ -3,6 +3,52 @@
 @tailwind utilities;
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
+}
+
+/* Panel Swiper Custom Styles */
+.panel-swiper {
+  overflow: visible;
+}
+
+.panel-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.swiper-wrapper{}
+/* Custom Pagination Styling - Single Indicator */
+.panel-swiper .swiper-pagination {
+  bottom: 0 !important;
+  position: relative;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.panel-swiper .swiper-pagination-fraction {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+.panel-swiper .custom-bullet-active {
+  background: rgb(12, 73, 185) !important;
+  width: 16px !important;
+  height: 7px !important;
+  border-radius: 100px !important;
+}
+/* Mobile Responsiveness */
+
+@media (max-width: 768px) {
+  .panel-swiper .swiper-pagination-fraction {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 }
