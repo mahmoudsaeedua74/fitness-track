@@ -45,27 +45,29 @@ export default function Navbar() {
             <NavLinks isMobile={false} />
           </div>
           <div className="flex items-center gap-2 w-full lg:w-fit justify-between ">
-            <Button variant="default" className="order-1 sm:order-none group  relative ">
-              <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
-                <svg
-                  className="w-5 h-5 text-[#11111]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </span>
-              <span className="relative w-full text-left transition-all duration-200 ease-in-out group-hover:scale-90">
-                Join Now
-              </span>
-            </Button>
+            <Link to={'/register'}>
+              <Button variant="default" className="order-1 sm:order-none group  relative ">
+                <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
+                  <svg
+                    className="w-5 h-5 text-[#11111]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </span>
+                <span className="relative w-full text-left transition-all duration-200 ease-in-out group-hover:scale-90">
+                  Join Now
+                </span>
+              </Button>
+            </Link>
 
             <div className="flex order-3 gap-2 items-center  justify-center">
               <motion.button
@@ -125,27 +127,29 @@ export default function Navbar() {
               </motion.div>
 
               <motion.div className="w-full" variants={menuItemVariants}>
-                <Button variant="default" className="order-1 mt-10 sm:order-none group  relative">
-                  <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
-                    <svg
-                      className="w-5 h-5 text-[#11111]"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
-                  </span>
-                  <span className="relative w-full text-left transition-all duration-200 ease-in-out group-hover:scale-90">
-                    Join Now
-                  </span>
-                </Button>
+                <Link to={'/register'}>
+                  <Button variant="default" className="order-1 mt-10 sm:order-none group  relative">
+                    <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
+                      <svg
+                        className="w-5 h-5 text-[#11111]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                      </svg>
+                    </span>
+                    <span className="relative w-full text-left transition-all duration-200 ease-in-out group-hover:scale-90">
+                      Join Now
+                    </span>
+                  </Button>
+                </Link>
               </motion.div>
             </motion.aside>
           </>

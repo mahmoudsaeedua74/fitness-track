@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import type { Plan } from '../../utils/interface';
 import { Button } from '../ui/Button';
 interface PanelCardProps {
@@ -62,42 +63,36 @@ const PanelCard: React.FC<PanelCardProps> = ({ data, isActive }) => {
           ))}
         </ul>
       </div>
-      <Button
-        variant="default"
-        className={` py-3 w-full group  relative rounded-lg font-medium transition-all ${
-          isActive ? '' : 'bg-black text-white hover:bg-white hover:text-black-text  border-black-text'
-        }`}
-      >
-        <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
-          <svg
-            className="w-5 h-5 text-[#11111]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M14 5l7 7m0 0l-7 7m7-7H3"
-            />
-          </svg>
-        </span>
-        <span className="relative w-full text-left transition-all duration-200 ease-in-out group-hover:scale-90">
-          Join Now
-        </span>
-      </Button>
-
-      {/* <Button
-        className={`w-full py-3 rounded-lg font-medium transition-all ${
-          isActive
-            ? 'bg-white text-black hover:bg-gray-100'
-            : 'bg-black text-white hover:bg-gray-800'
-        }`}
-      >
-        Choose Plan
-      </Button> */}
+      <Link to={'/register'}>
+        <Button
+          variant="default"
+          className={` py-3 w-full group  relative rounded-lg font-medium transition-all ${
+            isActive
+              ? ''
+              : 'bg-black text-white hover:bg-white hover:text-black-text  border-black-text'
+          }`}
+        >
+          <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
+            <svg
+              className="w-5 h-5 text-[#11111]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </span>
+          <span className="relative w-full text-left transition-all duration-200 ease-in-out group-hover:scale-90">
+            Join Now
+          </span>
+        </Button>
+      </Link>
     </div>
   );
 };

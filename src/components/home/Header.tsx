@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
-import { Button } from "../ui/Button";
-import { SocialLinks } from "./SocialIcon";
-import { containerVariants, itemVariants } from "../../utils/animation";
+import { motion } from 'framer-motion';
+import { Button } from '../ui/Button';
+import { SocialLinks } from './SocialIcon';
+import { containerVariants, itemVariants } from '../../utils/animation';
+import { Link } from 'react-router-dom';
 
 export default function HomeHeader() {
   return (
@@ -10,7 +11,7 @@ export default function HomeHeader() {
       <motion.img
         initial={{ scale: 1.15, opacity: 90 }}
         animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        transition={{ duration: 1.5, ease: 'easeOut' }}
         src="/assets/banner.webp"
         alt="Gym background"
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -54,40 +55,35 @@ export default function HomeHeader() {
           your workout
         </motion.h1>
 
-        <motion.p
-          variants={itemVariants}
-          className="text-base md:text-xl text-gray-200"
-        >
-          Join us for a unique fitness experience featuring yoga, dance,
-          crossfit, and personalized training sessions. We help you become the
-          best version of yourself!
+        <motion.p variants={itemVariants} className="text-base md:text-xl text-gray-200">
+          Join us for a unique fitness experience featuring yoga, dance, crossfit, and personalized
+          training sessions. We help you become the best version of yourself!
         </motion.p>
 
         <motion.div variants={itemVariants}>
-          <Button
-            variant="default"
-            className="order-1 mt-10 sm:order-none group relative"
-          >
-            <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
-              <svg
-                className="w-5 h-5 text-[#11111]"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </span>
-            <span className="relative w-full text-left transition-all duration-200 ease-in-out group-hover:scale-90">
-              Get start
-            </span>
-          </Button>
+          <Link to={'/register'}>
+            <Button variant="default" className="order-1 mt-10 sm:order-none group relative">
+              <span className="absolute end-0 pr-4 duration-200 ease-out group-hover:-translate-x-1">
+                <svg
+                  className="w-5 h-5 text-[#11111]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </span>
+              <span className="relative w-full text-left transition-all duration-200 ease-in-out group-hover:scale-90">
+                Get start
+              </span>
+            </Button>
+          </Link>
         </motion.div>
 
         <motion.div variants={itemVariants}>
