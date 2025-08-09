@@ -5,6 +5,8 @@ import Registration from './pages/Registration';
 import DashboardLayout from './layout/DashboardLayout.js';
 import DashboardPage from './pages/DashboardPage.js';
 import MembersPage from './pages/MembersPage.js';
+import { Toaster } from 'react-hot-toast';
+
 export default function App() {
   const route = createBrowserRouter([
     {
@@ -31,6 +33,7 @@ export default function App() {
   ]);
   return (
     <>
+      <Toaster />
       <RouterProvider router={route} />
     </>
   );
