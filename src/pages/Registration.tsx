@@ -55,7 +55,7 @@ const Registration: React.FC = () => {
     } catch (error) {
       console.log(error);
       toast.dismiss();
-      toast.error(error?.response?.data?.message || 'Login failed. Check email/password.');
+      // toast.error(error?.response?.data?.message || 'Login failed. Check email/password.');
     } finally {
       setIsLoading(false);
     }
@@ -96,7 +96,7 @@ const Registration: React.FC = () => {
                     onClick={() => setCurrentPage(1)}
                     className="text-blue-600 hover:text-blue-900 font-semibold transition-colors"
                   >
-                    Sign Up Now
+                    {isLoading ? ' Sign Up Now ' : ' Sign Up Now ...'}
                   </button>
                 </div>
               </div>
@@ -117,7 +117,7 @@ const Registration: React.FC = () => {
                     onClick={() => setCurrentPage(0)}
                     className="text-blue-600 hover:text-blue-900 font-semibold transition-colors"
                   >
-                    Sign In
+                    {isLoading ? ' Sign In ' : ' Sign In ...'}
                   </button>
                 </div>
               </div>
