@@ -7,32 +7,32 @@ const mainLinks = [
   {
     to: '/dashboard',
     icon: <CloseCircleIcon className="w-6 h-6" />,
-    label: 'navbar.dashboard',
+    label: 'Dashboard',
   },
   {
     to: '/member',
     icon: <CloseCircleIcon className="w-6 h-6" />,
-    label: 'navbar.content_makers',
+    label: 'Member',
   },
   {
     to: '/dashboard/verifications',
     icon: <CloseCircleIcon className="w-6 h-6" />,
-    label: 'navbar.verifications',
+    label: 'Trainer',
   },
   {
     to: '/dashboard/finance',
     icon: <CloseCircleIcon className="w-6 h-6" />,
-    label: 'navbar.finance',
+    label: 'Plans',
   },
   {
     to: '/dashboard/reports',
     icon: <CloseCircleIcon className="w-6 h-6" />,
-    label: 'navbar.reports',
+    label: 'Reports',
   },
   {
     to: '/dashboard/projects',
     icon: <CloseCircleIcon className="w-6 h-6" />,
-    label: 'navbar.projects',
+    label: 'Setting',
   },
 ];
 type SidebarLinksProps = {

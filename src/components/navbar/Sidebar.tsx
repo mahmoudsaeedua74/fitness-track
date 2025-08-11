@@ -22,7 +22,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Header */}
-      <div className="flex  justify-between py-5 items-center px-[22px] md:hidden">
+      <div className="flex  justify-between py-5 items-center px-[22px] md:hidden inter">
         <img
           src="/assets/logo.png"
           alt="logo of page"
@@ -43,16 +43,16 @@ export default function Sidebar() {
 
       {/* Mobile Sidebar + Overlay */}
       <div
-        className={`fixed inset-0 z-50  md:hidden transition-all duration-300 ${
+        className={`fixed inset-0 z-50   w-[60%]  md:hidden transition-all duration-300 ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setOpen(false)} />
+        <div className="absolute inset-0 bg-black/90" onClick={() => setOpen(false)} />
 
         {/* Sidebar */}
         <nav
-          className={`absolute left-0 top-0 bottom-0 w-full bg-[#2C2C2C]inter text-gray-color font-semibold py-10 px-[17.75px] flex flex-col justify-between transition-transform duration-300 transform ${
+          className={`absolute left-0 top-0 bottom-0 w-full bg-[#2C2C2C]   font-semibold py-10 px-[17.75px] flex flex-col justify-between transition-transform duration-300 transform ${
             isOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
